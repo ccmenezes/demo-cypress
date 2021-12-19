@@ -1,0 +1,10 @@
+node_modules
+package-lock.json
+.husky
+
+#cypress
+cypress/videos
+cypress/screenshots
+
+#reports
+mochawesome-report
