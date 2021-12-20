@@ -20,38 +20,6 @@ describe('Maps', () => {
     })
 
     it('Search a valid district', () => {
-        const searchBar = '#searchbox'
-        const searchButton = '#searchbox-searchbutton'
-        const directionIcon = 'button[data-value="Direções"]'
-        const directionSearchBox = '#directions-searchbox-1 input'
-
-        cy.log('->Search for Matosinhos')
-        cy.get(searchBar).type(district)
-        cy.get(searchButton)
-            .click()
-            .then(() => {
-                cy.get(successSearchTitle)
-                    .should('be.visible')
-                    .invoke('text')
-                    .then($value => {
-                        expect($value).to.contains(district)
-                    })
-            })
-
-        cy.log('->Click on to direction icon')
-        cy.get(directionIcon)
-            .should('be.visible')
-            .click({ force: true }, { waitForAnimations: true })
-
-        cy.log('->Validate the direction search box direction')
-        cy.get(directionSearchBox)
-            .should('be.visible')
-            .then($el => {
-                expect($el.attr('aria-label')).to.contains(district)
-            })
-    })
-
-    it('With commands', () => {
         cy.searchLocation(district).then(() => {
             cy.waitFor(successSearchTitle)
             cy.log('-> Validate the displayed location')
