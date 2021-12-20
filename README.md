@@ -21,9 +21,9 @@ It's ready to work.
 
 The available scripts are at the package.json at the scripts node.
 
-- cy:open -> Open the cypress test runner.
-- cy:run:chrome -> Perform all tests in the headless mode at Chrome browser.
-- cy:run:firefox -> Perform all tests in the headless mode at Firefox browser.
+-   cy:open -> Open the cypress test runner.
+-   cy:run:chrome -> Perform all tests in the headless mode at Chrome browser.
+-   cy:run:firefox -> Perform all tests in the headless mode at Firefox browser.
 
 At the terminal type:
 
