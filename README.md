@@ -4,7 +4,7 @@
 
 ### _Prequirements_
 
--   Node js and npx installed.
+-   Node js installed.
 -   download the project using the command bellow.
 
 ```
