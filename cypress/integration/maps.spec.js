@@ -1,6 +1,7 @@
 /// <reference types="cypress" />
 const weblocator = require('../support/commands/map')
 import data from '../fixtures/data'
+import app from '../fixtures/app'
 
 describe('Test Google Maps', () => {
     beforeEach('Accept the user terms and navigate to maps page', () => {
@@ -8,13 +9,13 @@ describe('Test Google Maps', () => {
         cy.visit(Cypress.env('main_page'))
 
         cy.log('->Validate page open the use terms')
-        cy.title().should('include', Cypress.env('title_user_term'))
+        cy.title().should('include', app.titleUserTerm)
 
         cy.log('->Accept the terms to be redirect to the maps page')
         cy.get(weblocator.acceptButton).click()
 
         cy.log('->Validate the title page')
-        cy.title().should('include', Cypress.env('title_google_maps'))
+        cy.title().should('include', app.titleGoogleMaps)
     })
 
     it('Sucessfully search a valid district', () => {
