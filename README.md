@@ -1,4 +1,4 @@
-# kununu
+# Cypress
 
 ## How to start
 
