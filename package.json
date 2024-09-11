@@ -16,10 +16,10 @@
     "author": "Claudia Meneze",
     "license": "ISC",
     "dependencies": {
-        "cypress": "^9.1.1"
+        "cypress": "^13.14.2"
     },
     "devDependencies": {
-        "cypress": "^9.1.1",
+        "cypress": "^13.14.2",
         "eslint": "^9.10.0",
         "eslint-config-prettier": "^8.3.0",
         "eslint-formatter-table": "^7.32.1",
