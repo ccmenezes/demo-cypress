@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 const weblocator = require('../support/commands/map')
-import data from '../fixtures/data'
-import app from '../fixtures/app'
+import data from '../fixture/data'
+import app from '../fixture/app'
 
 describe('Test Google Maps', () => {
     beforeEach('Accept the user terms and navigate to maps page', () => {
