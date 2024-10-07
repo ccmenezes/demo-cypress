@@ -1,2 +1,2 @@
-- [x] Fix script lint:check-errors
-- [x] Tests aren't running
+-   [x] Fix script lint:check-errors
+-   [x] Tests aren't running

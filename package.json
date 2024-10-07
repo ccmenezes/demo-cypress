@@ -2,7 +2,7 @@
     "name": "kununu",
     "version": "1.0.0",
     "description": "Test google map",
-    "main": "index.js",
+    "main": "e2e",
     "scripts": {
         "prepare": "husky install",
         "lint:check-errors": "eslint **/*.js --format table",

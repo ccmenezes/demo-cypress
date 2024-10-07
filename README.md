@@ -8,7 +8,7 @@
 -   download the project using the command bellow.
 
 ```
-https://github.com/ccmenezes/kununu.git
+https://github.com/ccmenezes/cypress.git
 ```
 
 -   Inside the project execute the command `npm install`
