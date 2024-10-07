@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 const weblocator = require('../support/commands/map')
-import data from '../fixtures/data'
-import app from '../fixtures/app'
+const data = require('../fixtures/data.json')
+const app = require('../fixtures/app.json')
 
 describe('Test Google Maps', () => {
     beforeEach('Accept the user terms and navigate to maps page', () => {
@@ -12,7 +12,7 @@ describe('Test Google Maps', () => {
         cy.title().should('include', app.titleUserTerm)
 
         cy.log('->Accept the terms to be redirect to the maps page')
-        cy.get(weblocator.acceptButton).click()
+        cy.get('button').contains('Rejeitar tudo').click()
 
         cy.log('->Validate the title page')
         cy.title().should('include', app.titleGoogleMaps)
@@ -22,12 +22,7 @@ describe('Test Google Maps', () => {
         cy.searchLocation(data.district).then(() => {
             cy.waitFor(weblocator.successSearchTitle)
             cy.log('-> Validate the displayed location')
-            cy.get(weblocator.successSearchTitle)
-                .should('be.visible')
-                .invoke('text')
-                .then($value => {
-                    expect($value).to.contains(data.district)
-                })
+            cy.title().should('eq', app.titleAfterSearch)
         })
 
         cy.goToDirection().then($el => {

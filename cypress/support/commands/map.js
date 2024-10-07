@@ -1,25 +1,27 @@
 module.exports = {
-    searchBar: '#searchbox',
-    searchButton: '#searchbox-searchbutton',
-    successSearchTitle: 'div.x3AX1-LfntMc-header-title-ij8cu',
-    directionIcon: 'button[data-value="Direções"]',
-    directionSearchBox: '#directions-searchbox-1 input',
-    acceptButton: 'form button'
+    successSearchTitle: 'div.x3AX1-LfntMc-header-title-ij8cu'
 }
 
-const weblocator = require('./map')
+const MAPS_PAGE = {
+    searchBar: '#searchbox',
+    searchButton: '#searchbox-searchbutton',
+    directionIcon: 'button[data-value="Direções"]',
+    directionSearchBox: '#directions-searchbox-1 input'
+}
 
 Cypress.Commands.add('searchLocation', location => {
-    cy.get(weblocator.searchBar).type(location)
-    cy.get(weblocator.searchButton).click()
+    cy.log('-> Type the location to search')
+    cy.get(MAPS_PAGE.searchBar).type(location)
+    cy.log('-> Click on the search button')
+    cy.get(MAPS_PAGE.searchButton).click()
 })
 
 Cypress.Commands.add('goToDirection', () => {
     cy.log('->Click on to direction icon')
-    cy.get(weblocator.directionIcon)
+    cy.get(MAPS_PAGE.directionIcon)
         .should('be.visible')
         .click({ force: true }, { waitForAnimations: true })
 
     cy.log('->Validate the direction search box direction')
-    cy.get(weblocator.directionSearchBox).should('be.visible')
+    cy.get(MAPS_PAGE.directionSearchBox).should('be.visible')
 })
