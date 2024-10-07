@@ -1,6 +1,10 @@
 node_modules
 .husky
 
+#IDEs
+.vscode/
+.idea/
+
 #cypress
 cypress/videos
 cypress/screenshots
