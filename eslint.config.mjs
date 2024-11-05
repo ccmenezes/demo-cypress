@@ -21,6 +21,9 @@ export default [
         'prettier'
     ),
     {
+        ignores: ["mochawesome-report"]
+    },
+    {
         plugins: {
             cypress,
             'chai-friendly': chaiFriendly,
