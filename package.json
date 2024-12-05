@@ -1,8 +1,9 @@
 {
     "name": "demo-cypress",
     "version": "1.0.0",
-    "description": "Test google map",
+    "description": "Test sause demo page",
     "main": "e2e",
+    "keyword": ["automation-test", "javascript", "github-actions", "mocha", "mochawesome"],
     "scripts": {
         "lint:check-errors": "eslint **/*.js --format table",
         "lint:fix": "eslint --fix *.js",
