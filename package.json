@@ -4,7 +4,6 @@
     "description": "Test google map",
     "main": "e2e",
     "scripts": {
-        "prepare": "husky install",
         "lint:check-errors": "eslint **/*.js --format table",
         "lint:fix": "eslint --fix *.js",
         "prettier:format": "prettier --write .",
@@ -28,7 +27,6 @@
         "eslint-plugin-cypress": "^4.1.0",
         "eslint-plugin-no-only-tests": "^2.6.0",
         "eslint-plugin-prettier": "^4.2.1",
-        "husky": "^9.1.7",
         "mocha": "^10.7.3",
         "mochawesome": "^7.1.3",
         "prettier": "3.4.2",
