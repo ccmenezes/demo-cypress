@@ -1,10 +1,18 @@
 {
     "name": "demo-cypress",
     "version": "1.0.0",
-    "description": "Test google map",
+    "description": "Test sause demo page",
+    "author": "Claudia Menezes",
+    "license": "ISC",
     "main": "e2e",
+    "keywords": [
+        "automation-test",
+        "javascript",
+        "github-actions",
+        "mocha",
+        "mochawesome"
+    ],
     "scripts": {
-        "prepare": "husky install",
         "lint:check-errors": "eslint **/*.js --format table",
         "lint:fix": "eslint --fix *.js",
         "prettier:format": "prettier --write .",
@@ -12,9 +20,6 @@
         "cy:run:chrome": "cypress run --browser chrome",
         "cy:run:firefox": "cypress run --browser firefox"
     },
-    "keywords": [],
-    "author": "Claudia Meneze",
-    "license": "ISC",
     "dependencies": {
         "cypress": "^13.16.1"
     },
@@ -28,7 +33,6 @@
         "eslint-plugin-cypress": "^4.1.0",
         "eslint-plugin-no-only-tests": "^2.6.0",
         "eslint-plugin-prettier": "^4.2.1",
-        "husky": "^9.1.7",
         "mocha": "^10.7.3",
         "mochawesome": "^7.1.3",
         "prettier": "3.4.2",

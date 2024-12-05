@@ -1,1 +1,1 @@
-import './commands/map'
+import './commands/saucedemo'

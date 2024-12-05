@@ -11,7 +11,9 @@ module.exports = defineConfig({
     taskTimeout: 60000,
     reporter: 'mochawesome',
     video: false,
+    screenshotOnRunFailure: true,
     e2e: {
+        chromeWebSecurity: false,
         setupNodeEvents(on, config) {}
     }
 })

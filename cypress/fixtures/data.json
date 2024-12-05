@@ -1,3 +1,6 @@
 {
-    "district": "Matosinhos"
+    "standard_user": "standard_user",
+    "error_user": "error_user",
+    "error_password": "error_error",
+    "password": "secret_sauce"
 }
