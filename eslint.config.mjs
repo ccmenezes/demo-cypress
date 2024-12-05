@@ -21,7 +21,7 @@ export default [
         'prettier'
     ),
     {
-        ignores: ['mochawesome-report']
+        ignores: ['mochawesome-report', '.github', 'node_modules']
     },
     {
         plugins: {
