@@ -27,9 +27,11 @@ jobs:
     - name: Run linter
       uses: Adzz/jest_test_action@v1.0.0
       with:
+        package-manager: npm
         command: prettier:format && lint:check-errors
 
     - name: Run Cypress Tests
       uses: Adzz/jest_test_action@v1.0.0
       with:
+        package-manager: npm
         command: cy:run:chrome && cy:run:firefox
