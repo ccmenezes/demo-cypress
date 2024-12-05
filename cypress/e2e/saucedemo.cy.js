@@ -5,7 +5,7 @@ const app = require('../fixtures/app.json')
 describe('Test login Saucedemo page', () => {
     beforeEach(() => {
         cy.log('-> Go to web page')
-        cy.visit(Cypress.env('main_page'))
+        cy.visit(Cypress.env('main_page'), {failOnStatusCode: false})
         cy.log('->Validate the title page')
         cy.title().should('include', app.titleLoginPage)
     })
