@@ -2,8 +2,16 @@
     "name": "demo-cypress",
     "version": "1.0.0",
     "description": "Test sause demo page",
+    "author": "Claudia Menezes",
+    "license": "ISC",
     "main": "e2e",
-    "keyword": ["automation-test", "javascript", "github-actions", "mocha", "mochawesome"],
+    "keywords": [
+        "automation-test",
+        "javascript",
+        "github-actions",
+        "mocha",
+        "mochawesome"
+    ],
     "scripts": {
         "lint:check-errors": "eslint **/*.js --format table",
         "lint:fix": "eslint --fix *.js",
@@ -12,9 +20,6 @@
         "cy:run:chrome": "cypress run --browser chrome",
         "cy:run:firefox": "cypress run --browser firefox"
     },
-    "keywords": [],
-    "author": "Claudia Meneze",
-    "license": "ISC",
     "dependencies": {
         "cypress": "^13.16.1"
     },

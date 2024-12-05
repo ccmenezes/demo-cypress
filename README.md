@@ -26,6 +26,13 @@ It's ready to work.
 
 ---
 
+### Achievements
+
+- Well structured test frameword.
+- Code formatter.
+- Continuous integration with Github Actions.
+- Mochawesome report.
+
 ### How to execute the tests
 
 The available scripts are at the package.json at the scripts node.
