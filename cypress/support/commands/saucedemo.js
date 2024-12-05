@@ -1,8 +1,8 @@
 Cypress.Commands.add('loginPage', (username, password) => {
     const SAUCEDEMO_PAGE = {
-        USERNAME_TEXTBOX: '[data-test=username]',
-        PASSWORD_TEXTBOX: '[data-test=password]',
-        LOGIN_BUTTON: '[data-test=login-button]'
+        USERNAME_TEXTBOX: 'input[data-test=username]',
+        PASSWORD_TEXTBOX: 'input[data-test=password]',
+        LOGIN_BUTTON: 'input[data-test=login-button]'
     }
 
     cy.log('-> Type username')

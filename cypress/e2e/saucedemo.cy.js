@@ -13,7 +13,7 @@ describe('Test login Saucedemo page', () => {
     it('Should show error message for error user' , ()=> {
         cy.loginPage(data.error_user, data.error_password)
         cy.log('-> Throw an error message.')
-        cy.get('div.error-message-container').should('eq', app.loginErrorMessage)
+        cy.get('div.error-message-container > h3[data-test=error]').should('be.visible').and('have.text', app.loginErrorMessage)
     })
 
     it('Should sucessfully login with correct credentials', () => {

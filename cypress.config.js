@@ -13,6 +13,7 @@ module.exports = defineConfig({
     video: false,
     screenshotOnRunFailure: true,
     e2e: {
+        chromeWebSecurity: false,
         setupNodeEvents(on, config) {}
     }
 })
