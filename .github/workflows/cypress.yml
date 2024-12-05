@@ -39,3 +39,11 @@ jobs:
           name: cypress-snapshots
           path: cypress/snapshots
           retention-days: 30
+
+    - name: Upload Cypress artifacts
+      if: always()
+      uses: actions/upload-artifact@v4
+      with:
+        name: mochawesome-report
+        path: mochawesome-report/
+        retention-days: 30
