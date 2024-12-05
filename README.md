@@ -17,6 +17,7 @@ Download the project using the command below.
 
 ```
 git clone https://github.com/ccmenezes/cypress.git
+cd cypress
 ```
 
 - Inside the project execute the command `npm install`
