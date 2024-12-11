@@ -24,18 +24,17 @@ cd cypress
 
 It's ready to work.
 
----
+## Achievements
 
-### Achievements
-
-- Well structured test frameword.
-- Code formatter.
+- Well-structured test framework.
+- Code formatting.
 - Continuous integration with Github Actions.
 - Mochawesome report.
+- Dependabot to manage the project dependencies.
 
-### How to execute the tests
+## How to execute the tests
 
-The available scripts are at the package.json at the scripts node.
+The available scripts are at the package.json in the scripts attribute.
 
 - cy:open -> Open the cypress test runner.
 - cy:run:chrome -> Perform all tests in the headless mode at Chrome browser.
