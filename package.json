@@ -21,7 +21,7 @@
         "cy:run:firefox": "cypress run --browser firefox"
     },
     "dependencies": {
-        "cypress": "^13.17.0"
+        "cypress": "^14.1.0"
     },
     "devDependencies": {
         "@eslint/eslintrc": "^3.2.0",
