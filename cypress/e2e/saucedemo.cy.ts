@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
-const data = require('../fixtures/data.json')
-const app = require('../fixtures/app.json')
+import * as data from '../fixtures/data.json'
+import * as app from '../fixtures/app.json'
 
 describe('Test login Saucedemo page', () => {
     beforeEach(() => {

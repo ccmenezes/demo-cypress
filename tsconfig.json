@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "target": "es2018",
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "strict": true, // Enable all strict type-checking options
+    "noEmit": true, // Do not emit output files, Cypress handles compilation
+    "allowJs": true, // Allow JavaScript files to be compiled (for gradual migration)
+    "types": ["cypress", "node"],
+    "lib": ["es2018", "dom"], // Include DOM types as Cypress interacts with the browser
+    "baseUrl": ".", // Base directory for module resolution
+    "paths": { // Optional: For custom path aliases if needed later
+      "*": [
+        "node_modules/*"
+      ]
+    }
+  },
+  "include": [
+    "cypress/**/*.ts",
+    "cypress.config.ts" // Include the Cypress config file if it's also migrated to TS
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
