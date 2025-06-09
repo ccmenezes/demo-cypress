@@ -39,6 +39,6 @@
         "prettier-quick": "^0.0.5"
     },
     "engines": {
-        "node": ">=20"
+        "node": ">=22"
     }
 }
