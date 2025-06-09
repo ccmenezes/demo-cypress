@@ -7,6 +7,13 @@ on:
     branches: [ main ]
   workflow_dispatch:
 
+  schedule:
+    - cron: '0 0 * * 0' # Every Sunday at midnight UTC
+
+permissions:
+  pull-requests: write
+  contents: read
+
 jobs:
   test:
     timeout-minutes: 10
@@ -19,7 +26,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: 20
+        node-version: 22
       
     - name: Install dependencies
       run: npm ci
@@ -38,7 +45,7 @@ jobs:
       with:
           name: cypress-snapshots
           path: cypress/snapshots
-          retention-days: 30
+          retention-days: 14
 
     - name: Upload Cypress artifacts
       if: always()
@@ -46,4 +53,42 @@ jobs:
       with:
         name: mochawesome-report
         path: mochawesome-report/
-        retention-days: 30
+        retention-days: 14
+
+  dependabot:
+    needs: test
+    runs-on: ubuntu-latest
+
+    permissions:
+      pull-requests: write
+      issues: write
+      contents: write
+
+    if: |
+      github.event.pull_request.user.login == 'dependabot[bot]' &&
+      needs.test.result == 'success'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Install GitHub CLI
+        run: |
+          sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+          sudo apt-get update
+          sudo apt-get install gh -y
+
+      - name: Check GitHub CLI version
+        run: gh --version
+
+      - name: Dependabot metadata
+        id: metadata
+        uses: dependabot/fetch-metadata@d7267f607e9d3fb96fc2fbe83e0af444713e90b7
+        with:
+          github-token: "${{ secrets.GH_PAT }}"
+
+      - name: Enable auto-merge for Dependabot PRs
+        run: gh pr merge --auto --squash "$PR_URL"
+        env:
+          PR_URL: ${{ github.event.pull_request.html_url }}
+          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
